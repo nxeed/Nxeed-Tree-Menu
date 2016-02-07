@@ -1,0 +1,15 @@
+{
+  "name": "Nxeed-Tree-Menu",
+  "description": "Vertical Tree Menu JQuery plugin from nxeed",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {},
+  "main": [
+    "js/jquery.ntm.js"
+  ],
+  "ignore": [
+    "*.json",
+    "demo",
+    "*.md"
+  ]
+}
