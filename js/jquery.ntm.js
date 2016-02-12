@@ -1,4 +1,4 @@
-/* jQuery Nxeed's Tree Menu v1 | (c) 2014 Nxeed | https://github.com/nxeed */
+﻿/* jQuery Nxeed's Tree Menu v1 | (c) 2014 Nxeed | https://github.com/nxeed */
 
 (function($) {
     var defaults = {
@@ -64,7 +64,10 @@
                 var posX = $(this).offset().left;
                 var posY = $(this).offset().top;
 
-                var clickX = e.pageX - posX;
+
+//                var clickX = e.pageX - posX;
+                // vijayanand.vp link position is now moved by 15 px after changes for alignment.
+                var clickX = e.pageX - posX + 15;
                 var clickY = e.pageY - posY;
 
                 if (clickX <= options.spoilerButtonClickMaxX && clickX >= options.spoilerButtonClickMinX && clickY <= options.spoilerButtonClickMaxY && clickY >= options.spoilerButtonClickMinY) {
