@@ -54,7 +54,8 @@
                 }
 
                 if (parent.hasClass(options.selectedClass)) {
-                    parent.removeClass(options.activeClass).removeClass(options.collapseClass).addClass(options.expandClass);
+                    //Thinesh - Explicitly hide the code that children nodes are expanded automatically next refresh.
+                    //parent.removeClass(options.activeClass).removeClass(options.collapseClass).addClass(options.expandClass);
                 }
             });
 
