@@ -53,10 +53,10 @@
                     }
                 }
 
-                if (parent.hasClass(options.selectedClass)) {
-                    //Thinesh - Explicitly hide the code that children nodes are expanded automatically next refresh.
+                //Thinesh - Explicitly hide the code that children nodes are expanded automatically next refresh.
+                //if (parent.hasClass(options.selectedClass)) {
                     //parent.removeClass(options.activeClass).removeClass(options.collapseClass).addClass(options.expandClass);
-                }
+                //}
             });
 
             $('.' + options.collapseClass + ' > ul', this).hide();
