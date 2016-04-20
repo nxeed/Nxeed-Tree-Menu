@@ -22,6 +22,7 @@
             var options = $.extend({}, defaults, params);
 
             var items = this.find('li');
+            var parentIndex = 0;
 
             $.each(items, function(num, item) {
                 item = $(item);
@@ -53,7 +54,13 @@
                     }
                 }
 
-                //Thinesh - Explicitly hide the code that children nodes are expanded automatically next refresh.
+                //Thinesh - Add id for parent node
+                if (options.autoParentDetection) {
+                    parent.attr('id','parentnode-' + parentIndex);
+                    parentIndex++;
+                }
+                
+                //Thinesh - Hide expansion of child node if parent has selected.
                 //if (parent.hasClass(options.selectedClass)) {
                     //parent.removeClass(options.activeClass).removeClass(options.collapseClass).addClass(options.expandClass);
                 //}
