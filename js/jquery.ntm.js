@@ -22,6 +22,7 @@
             var options = $.extend({}, defaults, params);
 
             var items = this.find('li');
+            var parentIndex = 1;
 
             $.each(items, function(num, item) {
                 item = $(item);
@@ -55,8 +56,8 @@
 
                 //Thinesh - Add id for parent node
                 if (options.autoParentDetection) {
-                    parent.attr('id','parentnode-' + parentindex);
-                    parentindex++;
+                    parent.attr('id','parentnode-' + parentIndex);
+                    parentIndex++;
                 }
                 
                 //Thinesh - Hide expansion of child node if parent has selected.
