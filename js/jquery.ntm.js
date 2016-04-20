@@ -22,7 +22,7 @@
             var options = $.extend({}, defaults, params);
 
             var items = this.find('li');
-            var parentIndex = 1;
+            var parentIndex = 0;
 
             $.each(items, function(num, item) {
                 item = $(item);
