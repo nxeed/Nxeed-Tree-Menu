@@ -53,7 +53,13 @@
                     }
                 }
 
-                //Thinesh - Explicitly hide the code that children nodes are expanded automatically next refresh.
+                //Thinesh - Add id for parent node
+                if (options.autoParentDetection) {
+                    parent.attr('id','parentnode-' + parentindex);
+                    parentindex++;
+                }
+                
+                //Thinesh - Hide expansion of child node if parent has selected.
                 //if (parent.hasClass(options.selectedClass)) {
                     //parent.removeClass(options.activeClass).removeClass(options.collapseClass).addClass(options.expandClass);
                 //}
