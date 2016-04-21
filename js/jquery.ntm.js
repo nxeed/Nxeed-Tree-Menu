@@ -15,7 +15,7 @@
         spoilerButtonClickMinY: 8,
         spoilerButtonClickMaxY: 24,
         slideEffect: true,
-        postRender : function () { $.noop }
+        postRender: $.noop
     };
 
     var methods = {
@@ -31,7 +31,7 @@
                 if (options.autoParentDetection) {
                     if (item.has('ul')[0]) {
                         item.addClass(options.parentClass);
-                        item.attr('id',"node-"+num); //Adding id to all tree elements
+                        item.attr('id',"node-" + num); //Adding id to all tree elements
                     }
                 }
 
