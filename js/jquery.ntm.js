@@ -14,7 +14,8 @@
         spoilerButtonClickMaxX: 20,
         spoilerButtonClickMinY: 8,
         spoilerButtonClickMaxY: 24,
-        slideEffect: true
+        slideEffect: true,
+        postRender: $.noop
     };
 
     var methods = {
@@ -30,6 +31,7 @@
                 if (options.autoParentDetection) {
                     if (item.has('ul')[0]) {
                         item.addClass(options.parentClass);
+                        item.attr('id',"node-" + num); //Adding id to all tree elements
                     }
                 }
 
@@ -53,6 +55,7 @@
                         parent.addClass(options.activeClass);
                     }
                 }
+                options.postRender(); //Added to invoke js function passed as param, if it is not passed $.noop will be invoked
 
                 //Thinesh - Add id for parent node
                 if (options.autoParentDetection) {
@@ -92,6 +95,7 @@
 
                     e.preventDefault();
                 }
+                options.postRender(); //Added to invoke js function passed as param, if it is not passed $.noop will be invoked
             });
         }
     };
